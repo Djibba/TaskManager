@@ -1,3 +1,5 @@
+require('./db/connect');
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
@@ -20,7 +22,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 app.use(session({
-    secret: 'loginpage',
+    secret: 'taskmanager',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }
