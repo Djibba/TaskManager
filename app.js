@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const mongoose = require('mongoose');
+const task = require('./routes/taskRoute');
 
 const app = express();
 
@@ -28,9 +29,7 @@ app.use(session({
     cookie: { secure: false }
 }));
 
-app.get('/', (req, res, next) => {
-    res.send("hello");
-});
+app.use('/',task);
 
 
 module.exports = app;
