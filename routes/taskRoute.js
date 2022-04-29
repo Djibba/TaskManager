@@ -9,6 +9,6 @@ const {
 } = require('../controllers/taskController');
 
 router.route('/api/tasks').get(getAllTasks).post(createTasks);
-router.route('/api/task/:id').get(getSingleTask).put(updateTask).delete(deleteTask);
+router.route('/api/task/:id').get(getSingleTask).put(updateTask).delete(deleteTask);git 
 
 module.exports = router;
