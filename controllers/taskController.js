@@ -1,10 +1,17 @@
 const mongoose = require('mongoose');
+const Task = require('../models/taskModel')
 
 const getAllTasks = (req, res, next) => {
     res.send('all tasks');
 };
 
-const createTasks = (req, res, next) => {
+const createTasks = async (req, res, next) => {
+
+    try {
+        
+    } catch (error) {
+        
+    }
     
 };
 
